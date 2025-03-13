@@ -1,0 +1,98 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+nav {
+    background-color: #e0f7fa; /* Light Blue */
+    padding: 15px 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav a {
+    color: #03a9f4; /* Blue */
+    text-decoration: none;
+    margin-left: 20px;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #0288d1; /* Darker Blue */
+}
+
+.h1-title {
+    color: #03a9f4; /* Blue */
+    margin: 0;
+    display: inline;
+    font-family: "Jersey 25", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 50px;
+  }
+
+.h1-title .ml-black{
+    color: black;
+}
+
+.main-content {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 20px auto;
+}
+
+.choice-list {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.choice-item {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.choice-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.choice-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.choice-item h3 {
+    padding: 15px;
+    margin: 0;
+    text-align: center;
+    color: #03a9f4; /* Blue */
+}
+
+.footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #e0f7fa; /* Light Blue */
+    border-top: 1px solid #b2ebf2;
+}
+.TextContent {
+    text-align: center;
+    color: black;   
+}
+.TextContent .paragraph {
+    padding: 15px;
+    margin: 0;
+    text-align: center;
+}
+
