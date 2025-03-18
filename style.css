@@ -53,33 +53,32 @@ nav a:hover {
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
 }
-/* 
+
 .choice-item {
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-} */
+} 
 
-/* .choice-item:hover {
+.choice-item:hover {
     transform: translateY(-5px);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-} */
-/* 
+} 
+
 .choice-item img {
     width: 100%;
     height: auto;
     display: block;
-} */
+} 
 
-/* .choice-item h3 {
+ .choice-item h3 {
     padding: 15px;
     margin: 0;
     text-align: center;
     color: #03a9f4;  Blue 
 }
-*/
 .footer {
     text-align: center;
     padding: 20px 0;
@@ -95,58 +94,3 @@ nav a:hover {
     margin: 0;
     text-align: center;
 }
-/* General styling for choice items */
-.choice-item {
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.choice-item img {
-    width: 100%;
-    height: auto;
-    display: block;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.choice-item h3 {
-    margin-top: 10px;
-    font-family: 'Raleway', sans-serif;
-    font-weight: bold;
-}
-
-/* Add scale effect on hover for active items */
-.choice-item:hover {
-    transform: scale(1.1);
-}
-
-/* Styling for items under development */
-.choice-item.under-development::before {
-    content: "Under Development";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.7); /* Dark overlay */
-    color: white;
-    font-size: 18px;
-    font-weight: bold;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 8px;
-    z-index: 2;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-}
-
-.choice-item.under-development:hover::before {
-    opacity: 1; /* Show overlay on hover */
-}
-
-/* .choice-item.under-development {
-    pointer-events: none; /* Disable clicking for under-development items */
