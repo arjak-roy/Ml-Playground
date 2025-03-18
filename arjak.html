@@ -5,41 +5,98 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Arjak Roy</title>
     <style>
-                body {
+        body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            margin: 20px;
+            margin: 0;
+            padding: 0;
             line-height: 1.6;
-            background-color: #f8f8f8;
-            color: #333;
-            opacity: 0;
-            animation: fadeIn 500ms forwards;
-            scale: 0.8;
-
+            background: linear-gradient(120deg, #0d1117, #1b0030);
+            background-size: 400% 400%;
+            color: #fff;
+            overflow-x: hidden;
+            animation: fadeIn 5s ease-in-out;
+            animation: gradientAnimation 2s linear infinite; /* Animation definition */
         }
-        @keyframes fadeIn {
-            to {
-                opacity: 1;
-                scale: 1;
+        @keyframes gradientAnimation {
+            0% {
+                background-position: 0% 50%;
+                /* background: linear-gradient(0deg, #0d1117, #1d0034, #240b00); */
+            }
+            25% {
+                background-position: 50% 50%;
+                /* background: linear-gradient(45deg, #0d1117, #1d0034, #240b00); */
+            }
+            50% {
+                background-position: 100% 50%;
+                /* background: linear-gradient(90deg, #0d1117, #1d0034, #240b00); */
+            }
+            75% {
+                background-position: 50% 50%;
+                /* background: linear-gradient(120deg, #0d1117, #1d0034, #240b00); */
+            }
+            100% {
+                background-position: 0% 50%;
+                /* background: linear-gradient(180deg, #0d1117, #1d0034, #240b00); */
             }
         }
 
-
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        
         .container {
             max-width: 800px;
-            margin: 0 auto;
-            background-color: #fff;
+            margin: 50px auto;
+            background: rgba(255, 255, 255, 0.05);
             padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(5px);
+            text-align: center;
+        }
+
+        .welcome {
+            font-size: 3rem;
+            font-weight: bold;
+            display: inline-block;
+            position: relative;
+            animation: bounce 2s infinite;
+            animation-timing-function: ease-in-out;
+        }
+
+        .welcome::after {
+    content: ' 👋';
+    font-size: 3rem;
+    display: inline-block;
+    animation: wave 1.5s infinite ease-in-out;
+    transform-origin: 70% 70%; /* Sets the pivot point for the rotation */
+}
+
+@keyframes wave {
+    0%, 100% { transform: rotate(0); }
+    25% { transform: rotate(20deg); }
+    50% { transform: rotate(-20deg); }
+    75% { transform: rotate(10deg); }
+}
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
         }
 
         .profile-image {
-            width: 150px;
-            height: 150px;
+            width: 40vh;
+            height: 40vh;
             border-radius: 50%;
             overflow: hidden;
             margin: 20px auto;
-            display: block;
+            transform: scale(1);
+            transition: transform 0.3s ease-in-out;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
         }
 
         .profile-image img {
@@ -47,28 +104,35 @@
             height: 100%;
             object-fit: cover;
         }
-        .profile-image:hover{
+
+        .profile-image:hover {
             transform: scale(1.1);
-            transition: transform 0.3s ease-in-out;
         }
 
         h1 {
-            text-align: center;
-            color: #007bff; /* Blue accent */
+            margin-top: 10px;
+            font-size: 2.5rem;
+            color: #ffffff;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
         }
 
         .section {
-            margin-bottom: 20px;
+            margin: 20px 0;
         }
 
         .section h2 {
-            color: #007bff;
-            border-bottom: 1px solid #ddd;
+            font-size: 2rem;
+            color: #91b2c2;
+            border-bottom: 2px solid rgba(255, 255, 255, 0.4);
+            display: inline-block;
             padding-bottom: 5px;
+            margin-bottom: 15px;
         }
 
-        .section p {
-            margin: 10px 0;
+        .section p, ul.contact-list {
+            font-size: 1.2rem;
+            margin: 15px 0;
+            color: #ccc;
         }
 
         .contact-list {
@@ -77,49 +141,174 @@
         }
 
         .contact-list li {
-            margin-bottom: 5px;
+            margin: 10px 0;
         }
 
         .contact-list li a {
-            color: #007bff;
+            color: #03a9f4;
             text-decoration: none;
+            transition: color 0.3s ease;
         }
 
         .contact-list li a:hover {
-            text-decoration: underline;
+            color: hsl(174, 100%, 50%);
         }
+
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .skill-tag {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            padding: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+        .projects {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
+
+        @media (min-width: 768px) {
+            .projects {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        .project-card {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            padding: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            text-align: left;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+        }
+
+        .project-card img {
+            width: 100%;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+
+        .project-title {
+            font-size: 1.5rem;
+            color: #d6d6d6;
+            margin: 0 0 10px;
+        }
+
+        .project-description {
+            font-size: 1rem;
+            color: #ccc;
+            margin-bottom: 10px;
+        }
+
+        .project-links {
+            margin-top: 10px;
+        }
+
+        .project-links a {
+            color: #03a9f4;
+            text-decoration: none;
+            margin-right: 15px;
+        }
+
+        .project-links a:hover {
+            color: #ff9800;
+        }
+
+        .technologies-used {
+            font-size: 0.9rem;
+            color: #ccc;
+            margin-top: 10px;
+        }
+
 
     </style>
 </head>
 <body>
     <div class="container">
+        <div class="welcome">Welcome!</div>
         <div class="profile-image">
-            <img src="Screenshot 2024-12-05 173604.png" alt="Arjak Roy"> </div>
+            <img src="arjak.jpeg" alt="Arjak Roy">
+        </div>
 
         <h1>Arjak Roy</h1>
-
         <div class="section">
-            <h2>About Me</h2>
             <p>
                 I am a passionate developer with a keen interest in machine learning and web technologies. I enjoy creating interactive and educational applications that make complex concepts accessible to everyone.
             </p>
             <p>
-                I am constantly learning and exploring new technologies, and I believe in the power of open-source collaboration.
+                Constantly learning and exploring new technologies, I strongly believe in the power of open-source collaboration.
             </p>
         </div>
 
         <div class="section">
-            <h2>Skills</h2>
-            <p>
-                HTML, CSS, JavaScript, Python, Flutter, Machine Learning, Deep Learning, NodeJs, ExpressJs, MongoDB, SQL, Git, GitHub, Firebase, FastApi
-            </p>
+            <h2>Skills🧑‍💻</h2>
+            <div class="skills">
+                <span class="skill-tag"><div class = "icon"><img src="icons8-html-48.png" alt=""></div>HTML</span>
+                <span class="skill-tag"><div class = "icon"><img src="icons8-css-48.png" alt=""></div>CSS</span>
+                <span class="skill-tag"><div class = "icon"><img src="icons8-javascript-48.png" alt=""></div>JavaScript</span>
+                <span class="skill-tag"><div class = "icon"><img src="icons8-python-48.png" alt=""></div>Python</span>
+                <span class="skill-tag"><div class = "icon" ><img src="icons8-flutter-48.png" alt=""></div>Flutter</span>
+                <span class="skill-tag"><div class = "icon"><img src="icons8-machine-learning-48.png" alt=""></div>Machine Learning</span>
+                <span class="skill-tag"><div class = "icon"><img src="icons8-nodejs-48.png" alt=""></div>Node.js</span>
+                <span class="skill-tag"><div class = "icon"><img src="icons8-express-js-48.png" alt=""></div>Express.js</span>
+                <span class="skill-tag"><div class = "icon"><img src="icons8-mongo-db-48.png" alt=""></div></dov>MongoDB</span>
+                <span class="skill-tag"><div class = "icon"><img src="icons8-git-48.png" alt=""></div>Git</span>
+                <span class="skill-tag"><div class = "icon"><img src="icons8-google-firebase-console-48.png" alt=""></div>Firebase</span>
+                <span class="skill-tag"><div class = "icon"><img src="fastapi.svg" alt=""></div>FastAPI</span>
+            </div>
+        </div>
+        <div class="section">
+            <h2>Projects 🛠️</h2>
+            <div class="projects">
+                <div class="project-card">
+                    <img src="project1.png" alt="Project 1">
+                    <h3 class="project-title">Ml Playground</h3>
+                    <p class="project-description">Here you can find a collection of machine learning playgrounds that can be used to practice and learn different machine learning algorithms.
+
+                    </p>
+                    <div class="project-links">
+                        <a href="https://github.com/arjak-roy/Ml-playground-webapp.git" >GitHub</a>
+                        <a href="https://arjak-roy.github.io/Ml-Playground/" >Live Website</a>
+                    </div>
+                    <div class="technologies-used">
+                        <strong>Technologies:</strong> Flutter web, Provider, fl_charts lib, Machine Learning
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="project2.png" alt="Project 2">
+                    <h3 class="Chatter Box">Project Two</h3>
+                    <p class="project-description">A flutter based light and realtime chat application</p>
+                    <div class="project-links">
+                        <a href="" >GitHub</a>
+                        <a href="https://chatterbox-bdd2d.firebaseapp.com/" >Live Website</a>
+                    </div>
+                    <div class="technologies-used">
+                        <strong>Technologies:</strong> Flutter, Dart, Node.js, Express.js, MongoDB
+                    </div>
+                </div>
+            </div>
         </div>
 
         <div class="section">
             <h2>Contact</h2>
             <ul class="contact-list">
-                <li>Email: <a href="mailto:arjakroy2411@gmail.com">arjakroy2411@gmail.com</a></li> <li>LinkedIn: <a href="https://www.linkedin.com/in/arjak-roy-07400524a/">linkedin.com/in/arjakroy</a></li> <li>GitHub: <a href="https://github.com/arjakroy">github.com/arjakroy</a></li>  </ul>
+                <li>Email: <a href="mailto:arjakroy2411@gmail.com">arjakroy2411@gmail.com</a></li>
+                <li>LinkedIn: <a href="https://www.linkedin.com/in/arjak-roy-07400524a/">linkedin.com/in/arjakroy</a></li>
+                <li>GitHub: <a href="https://github.com/arjak-roy">github.com/arjakroy</a></li>
+            </ul>
         </div>
+
     </div>
 </body>
 </html>
