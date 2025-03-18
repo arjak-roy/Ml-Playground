@@ -77,8 +77,57 @@ nav a:hover {
     padding: 15px;
     margin: 0;
     text-align: center;
-    color: #03a9f4;  Blue 
+    color: #03a9f4;  
 }
+ .choice-item-u{
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+ }
+ .choice-item-u:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    .under-construction h4 {
+        /* padding: 15px; */
+        margin: 0;
+        text-align: center;
+        color: #03a9f4;
+        transform: translateY(-5px);
+    }
+} 
+
+.choice-item-u img {
+    width: 100%;
+    height: auto;
+    display: block;
+} 
+
+.under-construction{
+    text-align: center;
+    width: 100%;
+    height: auto;
+    /* opacity: 0; */
+    
+}
+.under-construction h4{
+    padding: 10px;
+    margin: 0;
+    text-align: center;
+    color: #000000;  
+    text-emphasis-style: oblique;
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+ .choice-item-u h3 {
+    padding: 15px;
+    margin: 0;
+    text-align: center;
+    color: #03a9f4;  
+}
+
+
 .footer {
     text-align: center;
     padding: 20px 0;
