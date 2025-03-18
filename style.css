@@ -95,4 +95,62 @@ nav a:hover {
     margin: 0;
     text-align: center;
 }
+/* General styling for choice items */
+.choice-item {
+    position: relative;
+    list-style: none;
+    display: inline-block;
+    text-align: center;
+    margin: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.choice-item img {
+    width: 200px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.choice-item h3 {
+    margin-top: 10px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
+}
+
+/* Add scale effect on hover for active items */
+.choice-item:hover {
+    transform: scale(1.1);
+}
+
+/* Styling for items under development */
+.choice-item.under-development::before {
+    content: "Under Development";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 1;
+}
+
+.choice-item.under-development:hover::before {
+    opacity: 1;
+}
+
+.choice-item.under-development {
+    pointer-events: none; /* Disable click functionality for under-development items */
+}
 
