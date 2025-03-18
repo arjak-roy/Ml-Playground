@@ -148,6 +148,5 @@ nav a:hover {
     opacity: 1; /* Show overlay on hover */
 }
 
-.choice-item.under-development {
+/* .choice-item.under-development {
     pointer-events: none; /* Disable clicking for under-development items */
-}
