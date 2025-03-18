@@ -97,13 +97,11 @@ nav a:hover {
 }
 /* General styling for choice items */
 .choice-item {
-    position: relative;
-    list-style: none;
-    display: inline-block;
-    text-align: center;
-    margin: 10px;
-    cursor: pointer;
-    transition: transform 0.3s ease;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .choice-item img {
@@ -153,4 +151,3 @@ nav a:hover {
 .choice-item.under-development {
     pointer-events: none; /* Disable click functionality for under-development items */
 }
-
