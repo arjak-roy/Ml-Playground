@@ -11,8 +11,9 @@ nav {
     padding: 15px 20px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     display: flex;
-    justify-content: space-between;
+    justify-content:space-between;
     align-items: center;
+
 }
 
 nav a {
@@ -25,15 +26,22 @@ nav a {
 nav a:hover {
     color: #0288d1; /* Darker Blue */
 }
+.nav-links-container{
+    display: flex;
+    justify-content:stretch;
+    align-items: center;   
+}
+
 
 .h1-title {
     color: #03a9f4; /* Blue */
-    margin: 0;
+    margin: 10px;
     display: inline;
     font-family: "Jersey 25", sans-serif;
     font-weight: 400;
     font-style: normal;
     font-size: 50px;
+
   }
 
 .h1-title .ml-black{
