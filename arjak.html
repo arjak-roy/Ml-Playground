@@ -11,32 +11,28 @@
             padding: 0;
             line-height: 1.6;
             background: linear-gradient(120deg, #0d1117, #260042, rgb(33, 15, 33));
-            background-size: 400% 400%;
+            background-size: 500% 500%;
             color: #fff;
             overflow-x: hidden;
             animation: fadeIn 5s ease-in-out;
-            animation: gradientAnimation 2s linear infinite; /* Animation definition */
+            animation: gradientAnimation 2s linear infinite;
         }
+
         @keyframes gradientAnimation {
             0% {
                 background-position: 0% 50%;
-                /* background: linear-gradient(0deg, #0d1117, #1d0034, #240b00); */
             }
             25% {
                 background-position: 50% 50%;
-                /* background: linear-gradient(45deg, #0d1117, #1d0034, #240b00); */
             }
             50% {
                 background-position: 100% 50%;
-                /* background: linear-gradient(90deg, #0d1117, #1d0034, #240b00); */
             }
             75% {
                 background-position: 50% 50%;
-                /* background: linear-gradient(120deg, #0d1117, #1d0034, #240b00); */
             }
             100% {
                 background-position: 0% 50%;
-                /* background: linear-gradient(180deg, #0d1117, #1d0034, #240b00); */
             }
         }
 
@@ -48,9 +44,9 @@
                 opacity: 1;
             }
         }
-        
+
         .container {
-            max-width: 800px;
+            max-width: 1000px;
             margin: 50px auto;
             background: rgba(255, 255, 255, 0.05);
             padding: 20px;
@@ -59,7 +55,21 @@
             backdrop-filter: blur(5px);
             text-align: center;
         }
-
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content:start;
+            margin-bottom: 20px;
+        }
+        .header a{
+            margin: 0 10px;
+            color: #ffffff;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        .header a:hover{
+            color: #03a9f4;
+        }
         .welcome {
             font-size: 3rem;
             font-weight: bold;
@@ -70,22 +80,35 @@
         }
 
         .welcome::after {
-    content: ' 👋';
-    font-size: 3rem;
-    display: inline-block;
-    animation: wave 1.5s infinite ease-in-out;
-    transform-origin: 70% 70%; /* Sets the pivot point for the rotation */
-}
+            content: ' 👋';
+            font-size: 3rem;
+            display: inline-block;
+            animation: wave 1.5s infinite ease-in-out;
+            transform-origin: 70% 70%;
+        }
 
-@keyframes wave {
-    0%, 100% { transform: rotate(0); }
-    25% { transform: rotate(20deg); }
-    50% { transform: rotate(-20deg); }
-    75% { transform: rotate(10deg); }
-}
+        @keyframes wave {
+            0%, 100% {
+                transform: rotate(0);
+            }
+            25% {
+                transform: rotate(20deg);
+            }
+            50% {
+                transform: rotate(-20deg);
+            }
+            75% {
+                transform: rotate(10deg);
+            }
+        }
+
         @keyframes bounce {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-10px); }
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
         }
 
         .profile-image {
@@ -118,6 +141,14 @@
 
         .section {
             margin: 20px 0;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        .section.show {
+            opacity: 1;
+            transform: translateY(0);
+            transition: opacity 1s ease-out, transform 1s ease-out;
         }
 
         .section h2 {
@@ -167,6 +198,11 @@
             padding: 15px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
         }
+        .skill-tag img{
+            width: 24px;
+            height: 24px;
+        }
+
         .projects {
             display: grid;
             grid-template-columns: 1fr;
@@ -230,19 +266,26 @@
             color: #ccc;
             margin-top: 10px;
         }
-
-
     </style>
 </head>
 <body>
+
     <div class="container">
+        
+        <div class="header">
+            <a href="https://www.linkedin.com/in/arjak-roy-07400524a/">  <H4>Linkedin</H4> </a>
+            <a href="https://github.com/arjak-roy"> <H4>Github</H4> </a>
+            <a href="https://www.geeksforgeeks.org/user/royarjak2411/"> <H4>Gfg</H4> </a>
+            <a href="mailto:arjakroy2411@gmail.com"> <H4>Mail</H4> </a>
+
+        </div>
         <div class="welcome">Hi there!</div>
         <div class="profile-image">
             <img src="arjak.jpeg" alt="Arjak Roy">
         </div>
 
         <h1>Arjak Roy</h1>
-        <div class="section">
+        <div>
             <p>
                 I am a passionate developer with a keen interest in machine learning and web technologies. I enjoy creating interactive and educational applications that make complex concepts accessible to everyone.
             </p>
@@ -262,7 +305,7 @@
                 <span class="skill-tag"><div class = "icon"><img src="icons8-machine-learning-48.png" alt=""></div>Machine Learning</span>
                 <span class="skill-tag"><div class = "icon"><img src="icons8-nodejs-48.png" alt=""></div>Node.js</span>
                 <span class="skill-tag"><div class = "icon"><img src="icons8-express-js-48.png" alt=""></div>Express.js</span>
-                <span class="skill-tag"><div class = "icon"><img src="icons8-mongo-db-48.png" alt=""></div></dov>MongoDB</span>
+                <span class="skill-tag"><div class = "icon"><img src="icons8-mongo-db-48.png" alt=""></div>MongoDB</span>
                 <span class="skill-tag"><div class = "icon"><img src="icons8-git-48.png" alt=""></div>Git</span>
                 <span class="skill-tag"><div class = "icon"><img src="icons8-google-firebase-console-48.png" alt=""></div>Firebase</span>
                 <span class="skill-tag"><div class = "icon"><img src="fastapi.svg" alt=""></div>FastAPI</span>
@@ -294,7 +337,7 @@
                         <a href="https://chatterbox-bdd2d.firebaseapp.com/" >Live Website</a>
                     </div>
                     <div class="technologies-used">
-                        <strong>Technologies:</strong> Flutter, Dart, Node.js, Express.js, MongoDB
+                         <strong>Technologies:</strong> Flutter, Dart, Node.js, Express.js, MongoDB
                     </div>
                 </div>
                 <div class="project-card">
@@ -309,7 +352,6 @@
                         <strong>Technologies:</strong> Flutter, Dart, Node.js, Express.js, Socket.io
                     </div>
                 </div>
-
             </div>
         </div>
 
@@ -323,5 +365,23 @@
         </div>
 
     </div>
+
+    <script>
+        const sections = document.querySelectorAll('.section');
+
+        function checkVisibility() {
+            sections.forEach(section => {
+                const sectionTop = section.getBoundingClientRect().top;
+                const windowHeight = window.innerHeight;
+
+                // Check if the section is within the viewport
+                if (sectionTop < windowHeight * 0.8) { // You can adjust 0.8 to change when the fade-in starts
+                    section.classList.add('show');
+                }
+            });
+        }
+        window.addEventListener('scroll', checkVisibility);
+        checkVisibility(); //check on load too
+    </script>
 </body>
 </html>
