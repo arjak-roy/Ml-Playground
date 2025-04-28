@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -22,15 +23,19 @@
             0% {
                 background-position: 0% 50%;
             }
+
             25% {
                 background-position: 50% 50%;
             }
+
             50% {
                 background-position: 100% 50%;
             }
+
             75% {
                 background-position: 50% 50%;
             }
+
             100% {
                 background-position: 0% 50%;
             }
@@ -40,6 +45,7 @@
             from {
                 opacity: 0;
             }
+
             to {
                 opacity: 1;
             }
@@ -55,35 +61,41 @@
             backdrop-filter: blur(5px);
             text-align: center;
         }
+
         .header {
             flex-wrap: wrap;
             display: flex;
             flex-direction: row;
             align-items: center;
-            justify-content:space-between;
+            justify-content: space-between;
             margin-bottom: 20px;
         }
-        .header a{
+
+        .header a {
             margin: 0 10px;
             color: #ffffff;
             text-decoration: none;
             transition: color 0.3s ease;
         }
-        .header a:hover{
+
+        .header a:hover {
             color: #03a9f4;
         }
-        .header-links{
+
+        .header-links {
             display: flex;
             flex-direction: row;
             align-items: center;
-            justify-content:start;
+            justify-content: start;
         }
-        .header-resume{
+
+        .header-resume {
             display: flex;
             flex-direction: row;
             align-items: center;
-            justify-content:end;
+            justify-content: end;
         }
+
         .welcome {
             font-size: 3rem;
             font-weight: bold;
@@ -102,24 +114,32 @@
         }
 
         @keyframes wave {
-            0%, 100% {
+
+            0%,
+            100% {
                 transform: rotate(0);
             }
+
             25% {
                 transform: rotate(20deg);
             }
+
             50% {
                 transform: rotate(-20deg);
             }
+
             75% {
                 transform: rotate(10deg);
             }
         }
 
         @keyframes bounce {
-            0%, 100% {
+
+            0%,
+            100% {
                 transform: translateY(0);
             }
+
             50% {
                 transform: translateY(-10px);
             }
@@ -174,7 +194,8 @@
             margin-bottom: 15px;
         }
 
-        .section p, ul.contact-list {
+        .section p,
+        ul.contact-list {
             font-size: 1.2rem;
             margin: 15px 0;
             color: #ccc;
@@ -212,7 +233,8 @@
             padding: 15px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
         }
-        .skill-tag img{
+
+        .skill-tag img {
             width: 24px;
             height: 24px;
         }
@@ -280,20 +302,83 @@
             color: #ccc;
             margin-top: 10px;
         }
+
+        .experience {
+
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
+
+        @media (min-width: 768px) {
+            .experience {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        .job {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-self: center;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            padding: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .job-logo {
+            margin: 0 auto;
+            height: 100px;
+            width: 100px;
+            border-radius: 50%;
+            background-color: #ffffff;
+        }
+        .job-logo img {
+            width: 100%;
+            height: auto;
+            border-radius: 50%;
+        }
+        .job-details {
+            text-align: center;
+        }
+
+        .job a {
+            color: #03a9f4;
+            text-decoration: none;
+        }
+
+        .job:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+        }
     </style>
 </head>
+
 <body>
 
     <div class="container">
         <div class="header">
             <div class="header-links">
-                <a href="https://www.linkedin.com/in/arjak-roy-07400524a/">  <H4>Linkedin</H4> </a>
-                <a href="https://github.com/arjak-roy"> <H4>Github</H4> </a>
-                <a href="https://www.geeksforgeeks.org/user/royarjak2411/"> <H4>Gfg</H4> </a>
-                <a href="mailto:arjakroy2411@gmail.com"> <H4>Mail</H4> </a>
+                <a href="https://www.linkedin.com/in/arjak-roy-07400524a/">
+                    <H4>Linkedin</H4>
+                </a>
+                <a href="https://github.com/arjak-roy">
+                    <H4>Github</H4>
+                </a>
+                <a href="https://www.geeksforgeeks.org/user/royarjak2411/">
+                    <H4>Gfg</H4>
+                </a>
+                <a href="mailto:arjakroy2411@gmail.com">
+                    <H4>Mail</H4>
+                </a>
             </div>
             <div class="header-resume">
-                <a href="resume.pdf" download=""> <H4>Resume</H4> </a>
+                <a href="resume.pdf" download>
+                    <H4>Resume</H4>
+                </a>
             </div>
         </div>
         <hr size="1">
@@ -305,101 +390,152 @@
         <h1>Arjak Roy</h1>
         <div>
             <p>
-                I am a passionate developer with a keen interest in machine learning and web technologies. I enjoy creating interactive and educational applications that make complex concepts accessible to everyone.
+                I am a passionate developer with a keen interest in machine learning and web technologies. I enjoy
+                creating interactive and educational applications that make complex concepts accessible to everyone.
             </p>
             <p>
-                Constantly learning and exploring new technologies, I strongly believe in the power of open-source collaboration.
+                Constantly learning and exploring new technologies, I strongly believe in the power of open-source
+                collaboration.
             </p>
         </div>
 
         <div class="section">
             <h2>Skills🧑‍💻</h2>
             <div class="skills">
-                <span class="skill-tag"><div class = "icon"><img src="icons8-html-48.png" alt=""></div>HTML</span>
-                <span class="skill-tag"><div class = "icon"><img src="icons8-css-48.png" alt=""></div>CSS</span>
-                <span class="skill-tag"><div class = "icon"><img src="icons8-javascript-48.png" alt=""></div>JavaScript</span>
-                <span class="skill-tag"><div class = "icon"><img src="icons8-python-48.png" alt=""></div>Python</span>
-                <span class="skill-tag"><div class = "icon" ><img src="icons8-flutter-48.png" alt=""></div>Flutter</span>
-                <span class="skill-tag"><div class = "icon"><img src="icons8-machine-learning-48.png" alt=""></div>Machine Learning</span>
-                <span class="skill-tag"><div class = "icon"><img src="icons8-nodejs-48.png" alt=""></div>Node.js</span>
-                <span class="skill-tag"><div class = "icon"><img src="icons8-express-js-48.png" alt=""></div>Express.js</span>
-                <span class="skill-tag"><div class = "icon"><img src="icons8-mongo-db-48.png" alt=""></div>MongoDB</span>
-                <span class="skill-tag"><div class = "icon"><img src="icons8-git-48.png" alt=""></div>Git</span>
-                <span class="skill-tag"><div class = "icon"><img src="icons8-google-firebase-console-48.png" alt=""></div>Firebase</span>
-                <span class="skill-tag"><div class = "icon"><img src="fastapi.svg" alt=""></div>FastAPI</span>
+                <span class="skill-tag">
+                    <div class="icon"><img src="icons8-html-48.png" alt=""></div>HTML
+                </span>
+                <span class="skill-tag">
+                    <div class="icon"><img src="icons8-css-48.png" alt=""></div>CSS
+                </span>
+                <span class="skill-tag">
+                    <div class="icon"><img src="icons8-javascript-48.png" alt=""></div>JavaScript
+                </span>
+                <span class="skill-tag">
+                    <div class="icon"><img src="icons8-python-48.png" alt=""></div>Python
+                </span>
+                <span class="skill-tag">
+                    <div class="icon"><img src="icons8-flutter-48.png" alt=""></div>Flutter
+                </span>
+                <span class="skill-tag">
+                    <div class="icon"><img src="icons8-machine-learning-48.png" alt=""></div>Machine Learning
+                </span>
+                <span class="skill-tag">
+                    <div class="icon"><img src="icons8-nodejs-48.png" alt=""></div>Node.js
+                </span>
+                <span class="skill-tag">
+                    <div class="icon"><img src="icons8-express-js-48.png" alt=""></div>Express.js
+                </span>
+                <span class="skill-tag">
+                    <div class="icon"><img src="icons8-mongo-db-48.png" alt=""></div>MongoDB
+                </span>
+                <span class="skill-tag">
+                    <div class="icon"><img src="icons8-git-48.png" alt=""></div>Git
+                </span>
+                <span class="skill-tag">
+                    <div class="icon"><img src="icons8-google-firebase-console-48.png" alt=""></div>Firebase
+                </span>
+                <span class="skill-tag">
+                    <div class="icon"><img src="fastapi.svg" alt=""></div>FastAPI
+                </span>
             </div>
         </div>
         <div class="section">
-            <h2>Projects 🛠️</h2>
-            <div class="projects">
-                <div class="project-card" onclick="window.location.href = 'https://arjak-roy.github.io/Ml-Playground/'">
-                    <img src="project1.png" alt="Project 1">
-                    <h3 class="project-title">Ml Playground</h3>
-                    <p class="project-description">Here you can find a collection of machine learning playgrounds that can be used to practice and learn different machine learning algorithms.
-
-                    </p>
-                    <div class="project-links">
-                        <a href="https://github.com/arjak-roy/Ml-playground-webapp.git" >GitHub</a>
-                        <a href="https://arjak-roy.github.io/Ml-Playground/" >Live Website</a>
+            <h2>Experience 💼</h2>
+            <div class="experience">
+                <div class="job">
+                    <div class="job-logo">
+                        <img src="thecodershub.jpeg" alt="">
                     </div>
-                    <div class="technologies-used">
-                        <strong>Technologies:</strong> Flutter web, Provider, fl_charts lib, Machine Learning
-                    </div>
-                </div>
-                <div class="project-card" onclick="window.location.href = 'https://chatterbox-bdd2d.firebaseapp.com/'">
-                    <img src="project2.png" alt="Project 2">
-                    <h3 class="Chatter Box">ChatterBox</h3>
-                    <p class="project-description">A flutter based light and realtime chat application with E2E encrypted messages with AES.</p>
-                    <div class="project-links">
-                        <a href="https://github.com/arjak-roy/chatterBox-server.git" >GitHub</a>
-                        <a href="https://chatterbox-bdd2d.firebaseapp.com/" >Live Website</a>
-                    </div>
-                    <div class="technologies-used">
-                         <strong>Technologies:</strong> Flutter, Dart, Node.js, Express.js, MongoDB
-                    </div>
-                </div>
-                <div class="project-card" onclick="window.location.href = 'https://sketch-and-guess-61106.web.app/'">
-                    <img src="project3.png" alt="Project 3">
-                    <h3 class="Sketch-n-Guess">Sketch-n-Guess</h3>
-                    <p class="project-description">Experience the fun of drawing and guessing with our Skribbl.io-inspired web application! Gather your friends or join players from around the world in a lively online environment. Take turns drawing a secret word while others try to guess it. With room management, a scoring system, and a curated word set of 150 words, it's a simple yet engaging way to have fun and test your artistic and guessing skills.</p>
-                    <div class="project-links">
-                        <a href="https://github.com/arjak-roy/sketch-n-guess-server.git" >GitHub</a>
-                        <a href="https://sketch-and-guess-61106.web.app/" >Live Website</a>
-                    </div>
-                    <div class="technologies-used">
-                        <strong>Technologies:</strong> Flutter, Dart, Node.js, Express.js, Socket.io
+                    <div class="job-details">
+                        <h3>Software Developer Intern</h3>
+                        <p>Internship at <a href="https://www.thecodershub.in/">TheCodersHub</a></p>
+                        <p>May 2025 - Present</p>
                     </div>
                 </div>
             </div>
+            <div class="section">
+                <h2>Projects 🛠️</h2>
+                <div class="projects">
+                    <div class="project-card"
+                        onclick="window.location.href = 'https://arjak-roy.github.io/Ml-Playground/'">
+                        <img src="project1.png" alt="Project 1">
+                        <h3 class="project-title">Ml Playground</h3>
+                        <p class="project-description">Here you can find a collection of machine learning playgrounds
+                            that can be used to practice and learn different machine learning algorithms.
+
+                        </p>
+                        <div class="project-links">
+                            <a href="https://github.com/arjak-roy/Ml-playground-webapp.git">GitHub</a>
+                            <a href="https://arjak-roy.github.io/Ml-Playground/">Live Website</a>
+                        </div>
+                        <div class="technologies-used">
+                            <strong>Technologies:</strong> Flutter web, Provider, fl_charts lib, Machine Learning
+                        </div>
+                    </div>
+                    <div class="project-card"
+                        onclick="window.location.href = 'https://chatterbox-bdd2d.firebaseapp.com/'">
+                        <img src="project2.png" alt="Project 2">
+                        <h3 class="Chatter Box">ChatterBox</h3>
+                        <p class="project-description">A flutter based light and realtime chat application with E2E
+                            encrypted messages with AES.</p>
+                        <div class="project-links">
+                            <a href="https://github.com/arjak-roy/chatterBox-server.git">GitHub</a>
+                            <a href="https://chatterbox-bdd2d.firebaseapp.com/">Live Website</a>
+                        </div>
+                        <div class="technologies-used">
+                            <strong>Technologies:</strong> Flutter, Dart, Node.js, Express.js, MongoDB
+                        </div>
+                    </div>
+                    <div class="project-card"
+                        onclick="window.location.href = 'https://sketch-and-guess-61106.web.app/'">
+                        <img src="project3.png" alt="Project 3">
+                        <h3 class="Sketch-n-Guess">Sketch-n-Guess</h3>
+                        <p class="project-description">Experience the fun of drawing and guessing with our
+                            Skribbl.io-inspired web application! Gather your friends or join players from around the
+                            world in a lively online environment. Take turns drawing a secret word while others try to
+                            guess it. With room management, a scoring system, and a curated word set of 150 words, it's
+                            a simple yet engaging way to have fun and test your artistic and guessing skills.</p>
+                        <div class="project-links">
+                            <a href="https://github.com/arjak-roy/sketch-n-guess-server.git">GitHub</a>
+                            <a href="https://sketch-and-guess-61106.web.app/">Live Website</a>
+                        </div>
+                        <div class="technologies-used">
+                            <strong>Technologies:</strong> Flutter, Dart, Node.js, Express.js, Socket.io
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>Contact</h2>
+                <ul class="contact-list">
+                    <li>Email: <a href="mailto:arjakroy2411@gmail.com">arjakroy2411@gmail.com</a></li>
+                    <li>LinkedIn: <a
+                            href="https://www.linkedin.com/in/arjak-roy-07400524a/">linkedin.com/in/arjakroy</a></li>
+                    <li>GitHub: <a href="https://github.com/arjak-roy">github.com/arjakroy</a></li>
+                </ul>
+            </div>
+
         </div>
 
-        <div class="section">
-            <h2>Contact</h2>
-            <ul class="contact-list">
-                <li>Email: <a href="mailto:arjakroy2411@gmail.com">arjakroy2411@gmail.com</a></li>
-                <li>LinkedIn: <a href="https://www.linkedin.com/in/arjak-roy-07400524a/">linkedin.com/in/arjakroy</a></li>
-                <li>GitHub: <a href="https://github.com/arjak-roy">github.com/arjakroy</a></li>
-            </ul>
-        </div>
+        <script>
+            const sections = document.querySelectorAll('.section');
 
-    </div>
+            function checkVisibility() {
+                sections.forEach(section => {
+                    const sectionTop = section.getBoundingClientRect().top;
+                    const windowHeight = window.innerHeight;
 
-    <script>
-        const sections = document.querySelectorAll('.section');
-
-        function checkVisibility() {
-            sections.forEach(section => {
-                const sectionTop = section.getBoundingClientRect().top;
-                const windowHeight = window.innerHeight;
-
-                // Check if the section is within the viewport
-                if (sectionTop < windowHeight * 0.8) { // You can adjust 0.8 to change when the fade-in starts
-                    section.classList.add('show');
-                }
-            });
-        }
-        window.addEventListener('scroll', checkVisibility);
-        checkVisibility(); //check on load too
-    </script>
+                    // Check if the section is within the viewport
+                    if (sectionTop < windowHeight * 0.8) { // You can adjust 0.8 to change when the fade-in starts
+                        section.classList.add('show');
+                    }
+                });
+            }
+            window.addEventListener('scroll', checkVisibility);
+            checkVisibility(); //check on load too
+        </script>
 </body>
+
 </html>
